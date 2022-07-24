@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.system,
         theme: themeDataLight,
         // Routes config
-        initialRoute: RouteGenerator.home,
+        initialRoute: RouteGenerator.favoriteCourse,
         onGenerateRoute: RouteGenerator.generateRoute,
       ),
       designSize: const Size(414, 896),

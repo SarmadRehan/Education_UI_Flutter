@@ -44,7 +44,7 @@ class FavoriteCourseCard extends StatelessWidget {
                   child: Padding(
                     padding: REdgeInsets.all(5.0),
                     child: Text(
-                      'Experienced',
+                      favoriteCourse.experience,
                       style: TextStyle(
                         color: Theme.of(context).colorScheme.primary,
                         fontWeight: FontWeight.bold,
@@ -56,29 +56,95 @@ class FavoriteCourseCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 140.w,
-            left: 10.w,
+            bottom: 145.h,
+            left: 8.h,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.h),
+              child: Text(
+                favoriteCourse.category,
+                style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                    fontWeight: FontWeight.w400,
+                    color: kLightPlaceholderTextColor),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 135.h,
+            right: 8.h,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.h),
+              child: Text(
+                favoriteCourse.price,
+                style: Theme.of(context).textTheme.headline5!.copyWith(
+                    fontWeight: FontWeight.w500,
+                    color: const Color(0xff5B73D0)),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 125.h,
+            left: 8.h,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.h),
+              child: Text(
+                favoriteCourse.title,
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                      fontWeight: FontWeight.w500,
+                      color: kLightTextColor,
+                    ),
+              ),
+            ),
+          ),
+          kPageItemSpacing1,
+          Positioned(
+            bottom: 105.h,
+            left: 5.h,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.h),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'Design',
-                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                        fontWeight: FontWeight.w400,
-                        color: kLightPlaceholderTextColor),
+                  const Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                    size: 16.0,
                   ),
-                  Text(
-                    "\$90.00",
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
-                        fontWeight: FontWeight.w500,
-                        color: const Color(0xff5B73D0)),
+                  Padding(
+                    padding: EdgeInsets.only(left: 5.h),
+                    child: Text(
+                      favoriteCourse.ratings,
+                      style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                          fontWeight: FontWeight.w400,
+                          color: kLightPlaceholderTextColor),
+                    ),
                   ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 100.h),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.group,
+                          color: Colors.amber,
+                          size: 16.0,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 5.h),
+                          child: Text(
+                            favoriteCourse.participants,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(
+                                    fontWeight: FontWeight.w400,
+                                    color: kLightPlaceholderTextColor),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );

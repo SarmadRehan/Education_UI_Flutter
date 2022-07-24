@@ -4,9 +4,7 @@ import 'package:education/utils/constants.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../utils/routes.dart';
-import '../widgets/category_card.dart';
 import '../widgets/favorite_course_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -110,7 +108,7 @@ class HomePage extends StatelessWidget {
           ),
           kPageItemSpacing1,
           // Expanded(
-          //   child: ListView.builder(
+          //   child: ListView(
           //     shrinkWrap: true,
           //     // scrollDirection: Axis.horizontal,
           //     itemCount: categories.length,
@@ -163,9 +161,28 @@ class HomePage extends StatelessWidget {
             ),
           ),
           kPageItemSpacing2,
-          kPageItemSpacing2,
-          kPageItemSpacing2,
         ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.print),
+            label: 'Courses',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.message),
+            label: 'Notifications',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Mentors',
+          ),
+        ],
+        selectedItemColor: Colors.blueAccent,
       ),
     );
   }
