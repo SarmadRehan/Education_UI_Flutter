@@ -1,11 +1,11 @@
-import 'package:education/modules/favorite_course.dart';
+import 'package:education/modules/course.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../utils/constants.dart';
 
 class FavoriteCourseCard extends StatelessWidget {
-  final FavoriteCourse favoriteCourse;
+  final Course favoriteCourse;
   const FavoriteCourseCard({Key? key, required this.favoriteCourse})
       : super(key: key);
 

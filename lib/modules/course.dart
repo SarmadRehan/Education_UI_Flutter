@@ -1,4 +1,4 @@
-class FavoriteCourse {
+class Course {
   final int id;
   final String title;
   final String imageUrl;
@@ -8,7 +8,7 @@ class FavoriteCourse {
   final String participants;
   final String category;
 
-  FavoriteCourse({
+  Course({
     required this.experience,
     required this.id,
     required this.title,

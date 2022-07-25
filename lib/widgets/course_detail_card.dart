@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../utils/constants.dart';
 
-class FavoriteCourseDetailCard extends StatelessWidget {
-  final Course favoriteDetailCourses;
-  const FavoriteCourseDetailCard(
-      {Key? key, required this.favoriteDetailCourses})
-      : super(key: key);
+class CourseDetailCard extends StatelessWidget {
+  final Course coursesDetail;
+  const CourseDetailCard({
+    Key? key,
+    required this.coursesDetail,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +30,9 @@ class FavoriteCourseDetailCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: kBorderRadiusAll,
                   child: Image.network(
-                    favoriteDetailCourses.imageUrl,
+                    coursesDetail.imageUrl,
                     fit: BoxFit.fill,
-                    height: 186.h,
+                    height: 220.h,
                     width: 358.w,
                   ),
                 ),
@@ -47,7 +48,7 @@ class FavoriteCourseDetailCard extends StatelessWidget {
                       child: Padding(
                         padding: REdgeInsets.all(5.0),
                         child: Text(
-                          favoriteDetailCourses.experience,
+                          coursesDetail.experience,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.primary,
                             fontWeight: FontWeight.bold,
@@ -63,7 +64,7 @@ class FavoriteCourseDetailCard extends StatelessWidget {
           Padding(
             padding: kPagePadding,
             child: Text(
-              favoriteDetailCourses.category,
+              coursesDetail.category,
               style: Theme.of(context).textTheme.bodyText2!.copyWith(
                   fontWeight: FontWeight.w400,
                   color: kLightPlaceholderTextColor),
@@ -76,7 +77,7 @@ class FavoriteCourseDetailCard extends StatelessWidget {
               Padding(
                 padding: kPagePadding,
                 child: Text(
-                  favoriteDetailCourses.title,
+                  coursesDetail.title,
                   style: Theme.of(context).textTheme.bodyText1!.copyWith(
                         fontWeight: FontWeight.w500,
                         color: kLightTextColor,
@@ -86,7 +87,7 @@ class FavoriteCourseDetailCard extends StatelessWidget {
               Padding(
                 padding: kPagePadding,
                 child: Text(
-                  favoriteDetailCourses.price,
+                  coursesDetail.price,
                   style: Theme.of(context).textTheme.headline5!.copyWith(
                       fontWeight: FontWeight.w500,
                       color: const Color(0xff5B73D0)),
@@ -107,7 +108,7 @@ class FavoriteCourseDetailCard extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 5.h),
                   child: Text(
-                    favoriteDetailCourses.ratings,
+                    coursesDetail.ratings,
                     style: Theme.of(context).textTheme.bodyText2!.copyWith(
                         fontWeight: FontWeight.w400,
                         color: kLightPlaceholderTextColor),
@@ -125,7 +126,7 @@ class FavoriteCourseDetailCard extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(left: 5.h),
                         child: Text(
-                          favoriteDetailCourses.participants,
+                          coursesDetail.participants,
                           style: Theme.of(context)
                               .textTheme
                               .bodyText2!

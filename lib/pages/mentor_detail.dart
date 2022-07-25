@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../providers/dummy_data.dart';
 import '../utils/constants.dart';
-import '../widgets/course_detail_card.dart';
-import '../widgets/mentor_card.dart';
+import '../widgets/mentor_detail_card.dart';
 
-class CourseDetails extends StatelessWidget {
-  CourseDetails({Key? key}) : super(key: key);
+class MentorDetail extends StatelessWidget {
+  MentorDetail({Key? key}) : super(key: key);
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -25,7 +24,7 @@ class CourseDetails extends StatelessWidget {
         ),
         title: Center(
           child: Text(
-            "Course Details",
+            "Mentor",
             style: Theme.of(context)
                 .textTheme
                 .headline6!
@@ -50,19 +49,9 @@ class CourseDetails extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               shrinkWrap: true,
-              itemCount: courseDetails.length,
-              itemBuilder: (context, index) => CourseDetailCard(
-                coursesDetail: courseDetails[index],
-              ),
-            ),
-          ),
-          kPageItemSpacing2,
-          Expanded(
-            child: ListView.builder(
-              shrinkWrap: true,
-              itemCount: mentor.length,
-              itemBuilder: (context, index) => MentorCard(
-                mentor: mentor[index],
+              itemCount: mentorDetails.length,
+              itemBuilder: (context, index) => MentorDetailCard(
+                mentorDetailCard: mentorDetails[index],
               ),
             ),
           ),

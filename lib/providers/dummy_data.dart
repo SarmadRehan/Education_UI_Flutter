@@ -1,5 +1,6 @@
 import '../modules/category.dart';
-import '../modules/favorite_course.dart';
+import '../modules/course.dart';
+import '../modules/mentor.dart';
 
 final categories = [
   Category(
@@ -17,7 +18,7 @@ final categories = [
 ];
 
 final favoriteCourses = [
-  FavoriteCourse(
+  Course(
     id: 1,
     title: 'Web Design Education',
     imageUrl: 'http://via.placeholder.com/296x208',
@@ -27,7 +28,7 @@ final favoriteCourses = [
     experience: 'Experienced',
     ratings: '4.8 Reviews',
   ),
-  FavoriteCourse(
+  Course(
     id: 2,
     title: 'Mobile Design Education',
     imageUrl: 'http://via.placeholder.com/296x208',
@@ -39,7 +40,7 @@ final favoriteCourses = [
   ),
 ];
 final favoriteDetailCourses = [
-  FavoriteCourse(
+  Course(
     id: 1,
     title: 'Web Design Education',
     imageUrl: 'http://via.placeholder.com/358x186',
@@ -49,7 +50,7 @@ final favoriteDetailCourses = [
     experience: 'Experienced',
     ratings: '4.8 Reviews',
   ),
-  FavoriteCourse(
+  Course(
     id: 2,
     title: 'Mobile Design Education',
     imageUrl: 'http://via.placeholder.com/358x186',
@@ -59,7 +60,7 @@ final favoriteDetailCourses = [
     experience: 'Novice',
     ratings: '4.8 Reviews',
   ),
-  FavoriteCourse(
+  Course(
     id: 3,
     title: 'Web Design Education',
     imageUrl: 'http://via.placeholder.com/358x186',
@@ -68,5 +69,66 @@ final favoriteDetailCourses = [
     category: 'Design',
     experience: 'Experienced',
     ratings: '4.8 Reviews',
+  ),
+];
+
+final courseDetails = [
+  Course(
+    id: 1,
+    title: 'Web Design Education',
+    imageUrl: 'http://via.placeholder.com/358x220',
+    price: '\$90.00',
+    participants: '257 participants',
+    category: 'Design',
+    experience: 'Experienced',
+    ratings: '4.8 Reviews',
+  ),
+];
+
+final mentor = [
+  Mentor(
+    id: 1,
+    title: 'Ingredia Nutrisha',
+    imageUrl: 'http://via.placeholder.com/50x50',
+    category: 'Finance Teacher',
+  ),
+];
+
+final mentorDetails = [
+  Mentor(
+    id: 1,
+    title: 'Ingredia Nutrisha',
+    imageUrl: 'http://via.placeholder.com/50x50',
+    category: 'Finance Teacher',
+  ),
+  Mentor(
+    id: 2,
+    title: 'Ingredia Nutrisha',
+    imageUrl: 'http://via.placeholder.com/50x50',
+    category: 'Finance Teacher',
+  ),
+  Mentor(
+    id: 3,
+    title: 'Ingredia Nutrisha',
+    imageUrl: 'http://via.placeholder.com/50x50',
+    category: 'Finance Teacher',
+  ),
+  Mentor(
+    id: 4,
+    title: 'Ingredia Nutrisha',
+    imageUrl: 'http://via.placeholder.com/50x50',
+    category: 'Finance Teacher',
+  ),
+  Mentor(
+    id: 5,
+    title: 'Ingredia Nutrisha',
+    imageUrl: 'http://via.placeholder.com/50x50',
+    category: 'Finance Teacher',
+  ),
+  Mentor(
+    id: 6,
+    title: 'Ingredia Nutrisha',
+    imageUrl: 'http://via.placeholder.com/50x50',
+    category: 'Finance Teacher',
   ),
 ];
