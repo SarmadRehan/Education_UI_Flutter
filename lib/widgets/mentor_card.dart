@@ -45,31 +45,25 @@ class MentorCard extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: kPagePadding,
-                    child: Text(
-                      mentor.title,
-                      style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                            fontWeight: FontWeight.w500,
-                            color: kLightTextColor,
-                          ),
-                    ),
+                  Text(
+                    mentor.title,
+                    style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                          fontWeight: FontWeight.w500,
+                          color: kLightTextColor,
+                        ),
                   ),
                   kPageItemSpacing5,
-                  Padding(
-                    padding: kPagePadding,
-                    child: Text(
-                      mentor.category,
-                      style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                            fontWeight: FontWeight.w400,
-                            color: kLightPlaceholderTextColor,
-                          ),
-                    ),
+                  Text(
+                    mentor.category,
+                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                          fontWeight: FontWeight.w400,
+                          color: kLightPlaceholderTextColor,
+                        ),
                   ),
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(left: 150.h),
+                padding: EdgeInsets.only(left: 180.h),
                 child: const Icon(
                   Icons.menu,
                   color: Colors.black,

@@ -83,13 +83,10 @@ class MentorDetailCard extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 150.h),
-                child: const Icon(
-                  Icons.menu,
-                  color: Colors.black,
-                ),
-              ),
+              // const Icon(
+              //   Icons.menu,
+              //   color: Colors.black,
+              // ),
             ],
           ),
           kPageItemSpacing,

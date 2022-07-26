@@ -4,6 +4,7 @@ import 'package:education/utils/constants.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import '../utils/routes.dart';
 import '../widgets/favorite_course_card.dart';
 
@@ -164,22 +165,22 @@ class HomePage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: SvgPicture.asset("assets/icons/home.svg"),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.print),
+            icon: SvgPicture.asset("assets/icons/letter.svg"),
             label: 'Courses',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.message),
+            icon: SvgPicture.asset("assets/icons/message.svg"),
             label: 'Notifications',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Mentors',
+            label: 'User',
           ),
         ],
         selectedItemColor: Colors.blueAccent,
