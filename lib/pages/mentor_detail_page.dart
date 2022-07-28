@@ -36,7 +36,7 @@ class MentorDetail extends StatelessWidget {
           Padding(
             padding: kPagePadding,
             child: Icon(
-              Icons.menu_rounded,
+              Icons.more_vert,
               size: 30.w,
               color: kLightTextColor,
             ),

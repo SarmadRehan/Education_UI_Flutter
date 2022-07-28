@@ -5,16 +5,16 @@ import '../modules/mentor.dart';
 final categories = [
   Category(
       title: 'Dancing',
-      imageUrl: 'http://via.placeholder.com/40x40',
+      imgUrl: 'http://via.placeholder.com/40x40',
       classesDetails: '12 Classes'),
   Category(
-      title: 'Dancing',
-      imageUrl: 'http://via.placeholder.com/40x40',
-      classesDetails: '12 Classes'),
+      title: 'Music',
+      imgUrl: 'http://via.placeholder.com/40x40',
+      classesDetails: '10 Classes'),
   Category(
-      title: 'Dancing',
-      imageUrl: 'http://via.placeholder.com/40x40',
-      classesDetails: '12 Classes'),
+      title: 'Graphic',
+      imgUrl: 'http://via.placeholder.com/40x40',
+      classesDetails: '15 Classes'),
 ];
 
 final favoriteCourses = [

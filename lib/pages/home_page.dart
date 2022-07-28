@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import '../utils/routes.dart';
+import '../widgets/category_card.dart';
 import '../widgets/favorite_course_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -55,7 +56,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          kPageItemSpacing6,
+          kPageItemSpacing1,
           Padding(
             padding: kPagePadding,
             child: Text(
@@ -107,18 +108,21 @@ class HomePage extends StatelessWidget {
                   ),
             ),
           ),
-          kPageItemSpacing1,
-          // Expanded(
-          //   child: ListView(
-          //     shrinkWrap: true,
-          //     // scrollDirection: Axis.horizontal,
-          //     itemCount: categories.length,
-          //     itemBuilder: (context, index) => CategoryCard(
-          //       category: categories[index],
-          //     ),
-          //   ),
-          // ),
-          kPageItemSpacing2,
+          SizedBox(
+            height: 85.h,
+            width: double.infinity,
+            child: Expanded(
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: categories.length,
+                itemBuilder: (context, index) => CategoryCard(
+                  category: categories[index],
+                ),
+              ),
+            ),
+          ),
+          kPageItemSpacing3,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -151,13 +155,17 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          Expanded(
-            child: ListView.builder(
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              itemCount: favoriteCourses.length,
-              itemBuilder: (context, index) => FavoriteCourseCard(
-                favoriteCourse: favoriteCourses[index],
+          SizedBox(
+            height: 360.h,
+            width: double.infinity,
+            child: Expanded(
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: favoriteCourses.length,
+                itemBuilder: (context, index) => FavoriteCourseCard(
+                  favoriteCourse: favoriteCourses[index],
+                ),
               ),
             ),
           ),

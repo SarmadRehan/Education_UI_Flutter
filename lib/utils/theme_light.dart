@@ -10,11 +10,6 @@ final themeDataLight = ThemeData.light().copyWith(
   errorColor: kLightErrorColor,
   textTheme: GoogleFonts.sourceSerifProTextTheme(
     const TextTheme().copyWith(
-      // headline1: TextStyle(
-      //   fontSize: 48.sp,
-      //   fontWeight: FontWeight.bold,
-      //   color: kLightPrimaryColor,
-      // ),
       headline2: TextStyle(
         fontSize: 24.sp,
         fontWeight: FontWeight.bold,
@@ -84,8 +79,6 @@ final themeDataLight = ThemeData.light().copyWith(
     ),
   ),
   appBarTheme: const AppBarTheme(
-    // systemOverlayStyle: SystemUiOverlayStyle.light,
-    // backgroundColor: kLightPrimaryColor,
     elevation: 0,
   ),
   colorScheme: const ColorScheme.light().copyWith(

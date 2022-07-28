@@ -16,9 +16,7 @@ class CourseDetailCard extends StatelessWidget {
       semanticContainer: true,
       clipBehavior: Clip.hardEdge,
       shape: kRoundedRectangleBorderShape,
-      // borderOnForeground: true,
       elevation: 4,
-      // shadowColor:Colors.green,
       margin: REdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

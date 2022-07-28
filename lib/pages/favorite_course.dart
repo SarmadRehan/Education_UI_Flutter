@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../providers/dummy_data.dart';
 import '../utils/constants.dart';
 import '../widgets/favorite_course_detail_card.dart';
@@ -37,7 +36,7 @@ class FavoriteCourse extends StatelessWidget {
           Padding(
             padding: kPagePadding,
             child: Icon(
-              Icons.menu_rounded,
+              Icons.more_vert,
               size: 30.w,
               color: kLightTextColor,
             ),

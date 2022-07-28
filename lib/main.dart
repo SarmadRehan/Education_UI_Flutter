@@ -17,12 +17,12 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Education UI',
         // Theme config
         themeMode: ThemeMode.system,
         theme: themeDataLight,
         // Routes config
-        initialRoute: RouteGenerator.mentor,
+        initialRoute: RouteGenerator.mentorDetails,
         onGenerateRoute: RouteGenerator.generateRoute,
       ),
       designSize: const Size(414, 896),

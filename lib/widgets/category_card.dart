@@ -7,42 +7,60 @@ import '../modules/category.dart';
 class CategoryCard extends StatelessWidget {
   final Category category;
   const CategoryCard({Key? key, required this.category}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Card(
-      // semanticContainer: true,
+      semanticContainer: true,
       clipBehavior: Clip.hardEdge,
       shape: kRoundedRectangleBorderShape,
-      // borderOnForeground: true,
       elevation: 4,
-      // shadowColor:Colors.green,
-      margin: REdgeInsets.all(5),
-      child: Row(
+      margin: REdgeInsets.all(10.r),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CachedNetworkImage(
-            imageUrl: category.imageUrl,
-            placeholder: (context, url) => const CircularProgressIndicator(),
-            errorWidget: (context, url, error) => const Icon(Icons.error),
-            height: 40.h,
-            width: 40.w,
-            fit: BoxFit.fill,
-          ),
-          Expanded(
-            child: Padding(
-              padding: REdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    category.title,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.all(10.h),
+                child: CircleAvatar(
+                  child: ClipOval(
+                    child: CachedNetworkImage(
+                      imageUrl: category.imgUrl,
+                      height: 40.h,
+                      width: 40.w,
+                      fit: BoxFit.fill,
+                      placeholder: (context, url) =>
+                          const CircularProgressIndicator(),
+                      errorWidget: (context, url, error) =>
+                          const Icon(Icons.error),
+                    ),
                   ),
-                  Text(
-                    category.classesDetails,
-                  ),
-                ],
+                ),
               ),
-            ),
+              Padding(
+                padding: EdgeInsets.only(right: 70.h),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      category.title,
+                      style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                            fontWeight: FontWeight.w500,
+                            color: kLightTextColor,
+                          ),
+                    ),
+                    Text(
+                      category.classesDetails,
+                      style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                            fontWeight: FontWeight.w400,
+                            color: kLightPlaceholderTextColor,
+                          ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),

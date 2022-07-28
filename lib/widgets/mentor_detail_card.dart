@@ -17,9 +17,7 @@ class MentorDetailCard extends StatelessWidget {
       semanticContainer: true,
       clipBehavior: Clip.hardEdge,
       shape: kRoundedRectangleBorderShape,
-      // borderOnForeground: true,
       elevation: 4,
-      // shadowColor:Colors.green,
       margin: REdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,10 +81,6 @@ class MentorDetailCard extends StatelessWidget {
                   ),
                 ],
               ),
-              // const Icon(
-              //   Icons.menu,
-              //   color: Colors.black,
-              // ),
             ],
           ),
           kPageItemSpacing,
