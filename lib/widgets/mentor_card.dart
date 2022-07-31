@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../modules/mentor.dart';
+import '../models/mentor.dart';
 import '../utils/constants.dart';
 
 class MentorCard extends StatelessWidget {

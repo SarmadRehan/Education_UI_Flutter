@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../utils/constants.dart';
-import '../modules/category.dart';
+import '../models/category.dart';
 
 class CategoryCard extends StatelessWidget {
   final Category category;

@@ -1,6 +1,6 @@
-import '../modules/category.dart';
-import '../modules/course.dart';
-import '../modules/mentor.dart';
+import '../models/category.dart';
+import '../models/course.dart';
+import '../models/mentor.dart';
 
 final categories = [
   Category(
